@@ -16,7 +16,7 @@
 
     --purple-300: #9F75FF;
     --purple-400: #9164FA;
-    --purple-500: #8257E5;
+    --purple-500: #8257e5;
     --purple-800: #6F48C9;
 }
 
@@ -32,6 +32,7 @@
 }
 body {
     background-color: var(--gray-50);
+    overflow: hidden;
 }
 body, input, textarea, button {
     font: 500 1rem Inter sans-serif;
