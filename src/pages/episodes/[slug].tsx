@@ -4,6 +4,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { api } from '../../services/api';
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 import convertDurationToTimeString from '../../utils/convertDurationToTimeString';
 import styles from './episode.module.scss';
 import { usePlayer } from '../../context/PlayerContext';
@@ -31,6 +32,9 @@ export default function Episode({episode}:EpisodeProps){
 
     return(
         <div className={styles.episodeContainer}>
+            <Head>
+                <title>{episode.title} | Podcastr</title>
+            </Head>
             <div className={styles.episode}>
                 <div className={styles.thumbnailContainer}>
                     <Link href="/">
